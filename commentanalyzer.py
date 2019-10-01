@@ -1,3 +1,5 @@
+
+
 # This program checks on the code when it is merged into the build pipeline. This program runs everytime an engineer checks in code.
 # 
 # 
@@ -44,7 +46,7 @@
 # but uses much more memory: Analyzed at
 # 1235% more on average.
 class CommentCounter(object):
-	"""docstring for CheckFile"""
+        """docstring for CheckFile"""
 
 	#init that takes no arguments (no file name)
 	#file name is the only input for our class
@@ -54,10 +56,10 @@ class CommentCounter(object):
 		self.
 
 
- # have a dict of file extensions and comments and comment blocks for different file extensions. This allows scalability for adding file types and different types. Look into templates <template> T to give in different values? no this makes no sense.
- # 
- # desctructor
- # 
+# have a dict of file extensions and comments and comment blocks for different file extensions. This allows scalability for adding file types and different types. Look into templates <template> T to give in different values? no this makes no sense.
+# 
+# desctructor
+# 
 	def reset_counter(self):
 
 	def analyze_comment_type(self,self.line):
@@ -83,13 +85,13 @@ Circumstances for c style comments:
 some_code() // inline-comment
 
 
-	def check_in
-	def scan_file
-	def identify_comment
-	def seggregate_comments
-	def count_todo
-	def validate_file_type
-	def something_something(self):
+    def check_in
+    def scan_file
+    def identify_comment
+    def seggregate_comments
+    def count_todo
+    def validate_file_type
+    def something_something(self):
 		with open(file_name, 'r', encoding='utf-8') as active_file:
 			for line in active_file:
 				if line.startswith():

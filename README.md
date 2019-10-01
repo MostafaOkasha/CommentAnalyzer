@@ -1,5 +1,5 @@
-# MostafaOkasha.github.io
-## My Personal Website.
+# Comment Analyzer - Breakdown your code's comment structure
+## Note: This program is part of the Capital One 
 
 This is the latest version of my website.
 The base is an open-source Jekyll theme, which has been modified, adapted and incorporated with JQuery and Node.js for some simplistic beauty.
