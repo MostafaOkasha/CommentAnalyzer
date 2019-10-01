@@ -3,8 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Visual Studio Files
-*.VS
+# Visual Studio 2015 cache/options directory
+.vs/
 
 # C extensions
 *.so
