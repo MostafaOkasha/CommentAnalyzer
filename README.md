@@ -1,30 +1,31 @@
-# CommentAnalyzer - Breakdown your code's comment structure
+# CommentAnalyzer - 
 ## This program is part of the Capital One Technical Assessment
 ### Author: Mostafa Okasha (okashm@mcmaster.ca)
 
-The CommentAnalyzer class allows any file (code or otherwise) to be scanned and analyzed in order to count the total number of
-LOC (lines of code) as well as comments; inline and block, and TODOs. This can be interpretted and run when new code is submitted by a developer
-in order to encourage good practices and commenting. Be more self-aware of your commenting!
+The CommentAnalyzer class allows any file (code or otherwise) to be scanned and analyzed in order to count
+the total number of LOC (lines of code) as well as comments; inline and block, and TODOs. This can be
+interpretted and run when new code is submitted by a developer in order to encourage good practices and commenting.
+Be more self-aware of your commenting!
 
-##Introduction:
+## Introduction:
 
 
-##Thought Process:
+## Thought Process:
 Before I began programming anything, I asked myself about the sco
 
-##Assumptions:
+## Assumptions:
 
 
-##Design Decisions:
+## Design Decisions:
 
-##Scope:
+## Scope:
 
-##Tests:
+## Tests:
 
-##Edge Cases:
+## Edge Cases:
 
 
-##Adaptability:
+## Adaptability:
 adapting to different file types and comment structures depending on the file type.
 if the file type is unknown (just a name then what then?)
 
