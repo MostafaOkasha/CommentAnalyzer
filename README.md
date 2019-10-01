@@ -1,12 +1,32 @@
-# Comment Analyzer - Breakdown your code's comment structure
-## Note: This program is part of the Capital One 
+# CommentAnalyzer - Breakdown your code's comment structure
+## This program is part of the Capital One Technical Assessment
+### Author: Mostafa Okasha (okashm@mcmaster.ca)
 
-This is the latest version of my website.
-The base is an open-source Jekyll theme, which has been modified, adapted and incorporated with JQuery and Node.js for some simplistic beauty.
+The CommentAnalyzer class allows any file (code or otherwise) to be scanned and analyzed in order to count the total number of
+LOC (lines of code) as well as comments; inline and block, and TODOs. This can be interpretted and run when new code is submitted by a developer
+in order to encourage good practices and commenting. Be more self-aware of your commenting!
+
+##Introduction:
 
 
-### Check out: https://www.okasha.me
-#### SSL Certified and Cloudflare Protected!
+##Thought Process:
+Before I began programming anything, I asked myself about the sco
+
+##Assumptions:
+
+
+##Design Decisions:
+
+##Scope:
+
+##Tests:
+
+##Edge Cases:
+
+
+##Adaptability:
+adapting to different file types and comment structures depending on the file type.
+if the file type is unknown (just a name then what then?)
 
 
 ## Installation
@@ -28,5 +48,3 @@ Check out the Jekyll installation page for more information on how to get starte
 Note: Built using Jekyll, Node.js, HTML5, CSS3
 
 # License
-
-www.okasha.me is licensed under The MIT License. You can view it [here](https://github.com/MostafaOkasha/MostafaOkasha.github.io/blob/master/LICENSE).
