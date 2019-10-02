@@ -83,6 +83,28 @@ This is to prevent something weird from happenning even if it takes more memory.
 <br>
 Tested: memory tests with and without?
 
+Local variables in functions are accessed more quickly than global variables
+For this reason, having an instance variable as a counter for
+each LOC/COMMENT/inline/block that's 4 instance variables
+and potentially 4 times LOC slower access. It is best
+to keep the instance variables set as 0 initially and then
+when running the code, increment them locally then when done
+post the final value to the instance variable equivelant.
+
+file name validity check; checking first . faster than checking
+. in entire name. This is simple, doesn't take
+much processing anyway, very minute. but over
+10,000+ tests might be problematic?
+WHY NOT!
+
+
+Built using Test Driven Development. Each method was
+tested against all edge cases before
+proceeding. Given the time constraints of the
+assessment, this ensured working code
+from teh very start.
+
+
 ## Scope
 
 ## Tests
@@ -95,19 +117,28 @@ Tested: memory tests with and without?
 // comment /* comment */
 print("//comment")
 ^ all rules should pass for this case as well.
+""" comment """ comment """ comment """
+the second comment is not actually in a comment,
+even though it's trying to be. The first """ terminates
+the comment
 
+file name: a.tar.gz
+what then?
 
 
 ## Adaptability
 adapting to different file types and comment structures depending on the file type.
 if the file type is unknown (just a name then what then?)
 
-
+These methods are required anyway so might as well
+make them accessible and usable to perform other functionalities
+as well.
+on why to initiate the object with or without a file name
 ## Installation
 
 ```console
-git clone https://github.com/MostafaOkasha/MostafaOkasha.github.io
-cd MostafaOkasha.github.io
+git clone https://github.com/MostafaOkasha/CommentAnalyzer
+cd CommentAnalyzer
 bundle install
 bundle exec jekyll serve
 ```

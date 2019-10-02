@@ -46,10 +46,10 @@ def again():
 		
 def calculate():
 	# TODO: Implement the calculate function
-	
+    
 def input():
 	# TODO: Implement this function
-	return 'Dummy'
+    return 'Dummy'
 	
 def realpath(path):
 	'''
