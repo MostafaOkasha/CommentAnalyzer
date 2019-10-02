@@ -1,5 +1,5 @@
 # Author:       Mostafa Okasha (okashm@mcmaster.ca)
-# Affiliation:  CapitalOne Technical Assessment
+# Affiliation:  CapitalOne - Technical Assessment
 
 """  ------Class Methods Expansion------
 #
@@ -58,35 +58,70 @@
 # """
 
 class CommentAnalyzer(object):
-    """
+    """Determine quantitative values for different comment types
+
     Count the LOC (lines of code) and analyze it to determine the LOC that are comments, 
     block comments, in-line comments and TODOs to provide a quantitive analysis.
     """
+
     def __init__(self, file_name=""):
         self.file_name = file_name
         self.file_type = file_name.get_file_type();
-        self.check_in_status = 0 # 0 for not checked 
+        self.check_in_status = 0 # 0 for not checked
 
+        # Counter variables
+        # use dictionary iteritems
+        # collections.dequeue is much faster since it doesn't rebuild the list
+        self.loc_count = 0          # LOC: Lines of Code
+        self.comment_count = 0
+        self.inline_comment_count = 0
+        self.block_comment_count = 0
 
+    # Local variables in functions are accessed more quickly than global variables
+    # 
     def get_file_type(self):
         if !startswith(self.file_name,'.'):
             #extract everything after the dor
 
+    # TODO: hello
+
+    @classmethod
+    def make_sound(cls):
+        # You can run this on the entire class and all instances of the class?
+        print(hello)
+
+    #when you need no access to the class, Python won't pass the class to it.
+    @staticmethod
+    def make_sound():
+        print(hello)
+
+    @property
+    def engine_strain(self):
+        if not self.engines:
+            return 0
+        elif self.shields:
+            return self.engspeed * 2
+        return self.eng_speed
+    # property can be treated like an instance variable.
+    # when you call object.engine_strain it will return 0 or double the engspeed
+    # but you can't set it! you can't write object.engine_strain = 2
+    # if it's just property, it is pretty much a getter. this below is a setter
+
+
+    # Have a config.py where you can config your values for comments and file extension names
+
+    @name_of_property.setter
+    def engine_strain(self, value):
+        print("giving it all I got")
+
     with open(file_name, 'r', encoding='utf-8') as active_file:
         for line in active_file:
             if line.startswith():
+                print(hello)
 
-
-
-
-
-
-
-
-
-
-
-
+    # This is a destructor
+    def __del__(self):
+        self.destruct = true
 
 
 
