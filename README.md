@@ -121,8 +121,7 @@ create new(okasha_class) ^ In-line comment
 ```
 ### Download Resources
 
-1. *Google Drive* --> download
-2. *OneDrive* ------> download
+1. *Google Drive* --> https://drive.google.com/file/d/1ekBpNlebM2eQukTn40k9oh0ukQTrNwx5/view?usp=sharing
 
 
 ## Testing Scope
