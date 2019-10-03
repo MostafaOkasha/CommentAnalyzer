@@ -45,7 +45,7 @@ def again():
 		
 		
 def calculate():
-	# TODO: Implement the calculate function
+    # TODO: Implement the calculate function
     
 def input():
 	# TODO: Implement this function

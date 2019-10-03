@@ -12,7 +12,10 @@ TODO = 'TODO'
 DUAL_SYNTAX = 'DUAL_SYNTAX'
 
 # For languages that have only single line comments and different begin and end comment syntax
-DIFF_SINGLE = 'DIFF_SINGLE'
+BLOCK_ONLY = 'BLOCK_ONLY'
+SINGLE_ONLY = 'SINGLE_ONLY'
+SINGLE_BLOCK = 'SINGLE_BLOCK'
+
 # Determine language syntax group by looking up file extensions
 # Each tuple value bool --> True if support Block-Comments
 
@@ -51,13 +54,13 @@ EXTENSIONS_STYLE = {'c'     : ('c_syntax',True),         # C
                     'pl'    : ('hash_syntax',False),     # Perl
                     'r'     : ('hash_syntax',False),     # R Language
 
-                    'html'  : ('xml_syntax',DIFF_SINGLE),# HTML
-                    'htm'   : ('xml_syntax',DIFF_SINGLE),# HTML variation
-                    'xhtml' : ('xml_syntax',DIFF_SINGLE),# HTML variation
-                    'jhtml' : ('xml_syntax',DIFF_SINGLE),# HTML variation
-                    'xml'   : ('xml_syntax',DIFF_SINGLE),# XML
-                    'rss'   : ('xml_syntax',DIFF_SINGLE),# XML Variation
-                    'svg'   : ('xml_syntax',DIFF_SINGLE),# XML Variation
+                    'html'  : ('xml_syntax',BLOCK_ONLY), # HTML
+                    'htm'   : ('xml_syntax',BLOCK_ONLY), # HTML variation
+                    'xhtml' : ('xml_syntax',BLOCK_ONLY), # HTML variation
+                    'jhtml' : ('xml_syntax',BLOCK_ONLY), # HTML variation
+                    'xml'   : ('xml_syntax',BLOCK_ONLY), # XML
+                    'rss'   : ('xml_syntax',BLOCK_ONLY), # XML Variation
+                    'svg'   : ('xml_syntax',BLOCK_ONLY), # XML Variation
                     
                     'matlab': ('matlab_syntax',True),    # Matlab
                     'yaws'  : ('matlab_syntax',False),   # Erlang
@@ -106,7 +109,7 @@ STYLE_SYNTAX = {'c_syntax'      : ('//',('/*','*/')),
 OUTPUT_FORMAT = {'loc' : 'lines',
                  'tot_comments' : 'comment lines',
                  'single_comments' : 'single line comments',
-                 'block_comments' : 'comment lines within block comments',
-                 'block_comment_lines' : 'block line comments',
+                 'block_comment_lines' : 'comment lines within block comments',
+                 'block_comments' : 'block line comments',
                  'todos' : 'TODO\'s'
                  }

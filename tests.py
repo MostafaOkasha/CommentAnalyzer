@@ -61,8 +61,52 @@ class CommentAnalyzerTest(unittest.TestCase):
 
 if __name__ == '__main__':
     #unittest.main()
-
-    filename = "extensions.py"
-    test_class = CommentAnalyzer(filename)
+    print("extension.py")
+    filename1 = "extensions.py"
+    test_class = CommentAnalyzer(filename1)
     test_class.analyze_code()
     test_class.analysis_output('terminal')
+
+    # extensions.py solution:
+    # 115 lines of code (CORRECT)
+    # total num of comments: 81 (82, it's counting '#' FIX)
+    # single comments: 71
+    # num of lines in blocks: 12 (DONE)
+    # num of blocks: 6 = 6 (DONE)
+    # num of todos: 3 = 4
+    
+
+    print(" ")
+    print(" ")
+    print("Test4")
+    filename2 = "tests/test_cases/test4.py"
+    test_class2 = CommentAnalyzer(filename2)
+    test_class2.analyze_code()
+    test_class2.analysis_output('terminal')
+    # test 4 solution
+
+    # 25 lines of code (CORRECT)
+    # total num of comments: 14
+    # single comments: 7
+    # num of lines in blocks: 7
+    # num of blocks: 3
+    # num of todos: 6
+
+
+    print(" ")
+    print(" ")
+    print("Test3")
+    filename3 = "tests/test_cases/test3.py"
+    test_class3 = CommentAnalyzer(filename3)
+    test_class3.analyze_code()
+    test_class3.analysis_output('terminal')
+
+    # test 3 solution
+
+    #Total # of lines: 61 = 61 (DONE)
+    #Total # of comment lines: 19 = 16
+    #Total # of single line comments: 9 = 7
+    #Total # of comment lines within block comments: 10 = 9
+    #Total # of block line comments: 3 = 3 (DONE)
+    #Total # of TODO’s: 3 = 3 (DONE)
+    
