@@ -54,42 +54,61 @@ class CommentAnalyzerTest(unittest.TestCase):
         test_class = CommentAnalyzer(filename)
         test_class.analyze_code()
         result = test_class.counter_dict["loc"]
-        self.assertEqual(result, 15)
+        self.assertEqual(result, 118)
 
+    def test_1_output(self):
+        """
+        Test CommentAnalyzer class's capability to analyze comments
+        """
+        filename = "tests/test_cases/test1.java"
+        test_class = CommentAnalyzer(filename)
+        test_class.analyze_code()
+        test_output = test_class.analysis_output('JSON')
+        
+        actual_output = {'loc': 60, 'tot_comments': 28, 'single_comments': 6, 
+                         'block_comment_lines': 22, 'block_comments': 2, 'todos': 1}
+        self.assertEqual(test_output, actual_output)
+
+    def test_2_output(self):
+        """
+        Test CommentAnalyzer class's capability to analyze comments
+        """
+        filename = "tests/test_cases/test2.js"
+        test_class = CommentAnalyzer(filename)
+        test_class.analyze_code()
+        test_output = test_class.analysis_output('JSON')
+        
+        actual_output = {'loc': 40, 'tot_comments': 23, 'single_comments': 5,
+                        'block_comment_lines': 18, 'block_comments': 4, 'todos': 1}
+        self.assertEqual(test_output, actual_output)
+
+    def test_3_output(self):
+        """
+        Test CommentAnalyzer class's capability to analyze comments
+        """
+        filename = "tests/test_cases/test3.py"
+        test_class = CommentAnalyzer(filename)
+        test_class.analyze_code()
+        test_output = test_class.analysis_output('JSON')
+
+        actual_output = {'loc': 61, 'tot_comments': 19, 'single_comments': 9,
+                        'block_comment_lines': 10, 'block_comments': 3, 'todos': 3}
+        self.assertEqual(test_output, actual_output)
+
+    def test_4_output(self):
+        """
+        Test CommentAnalyzer class's capability to analyze comments
+        """
+        filename = "tests/test_cases/test4.py"
+        test_class = CommentAnalyzer(filename)
+        test_class.analyze_code()
+        test_output = test_class.analysis_output('JSON')
+
+        actual_output = {'loc': 25, 'tot_comments': 13, 'single_comments': 6,
+                        'block_comment_lines': 7, 'block_comments': 3, 'todos': 5}
+        self.assertEqual(test_output, actual_output)
 
 
 
 if __name__ == '__main__':
     unittest.main()
-
-    print(" ")
-    print("Test3")
-    filename3 = "tests/test_cases/test3.py"
-    test_class3 = CommentAnalyzer(filename3)
-    test_class3.analyze_code()
-    test_class3.analysis_output('terminal')
-
-    # test 3 solution
-
-    #Total # of lines: 61 = 61 (DONE)
-    #Total # of comment lines: 19 = 19 (DONE)
-    #Total # of single line comments: 9 = 9 (DONE)
-    #Total # of comment lines within block comments: 10 = 10 (DONE)
-    #Total # of block line comments: 3 = 3 (DONE)
-    #Total # of TODO’s: 3 = 3 (DONE)
-    
-
-    print(" ")
-    print(" ")
-    print("Test2.js")
-    filename4 = "tests/test_cases/test2.js"
-    test_class4 = CommentAnalyzer(filename4)
-    test_class4.analyze_code()
-    test_class4.analysis_output('terminal')
-
-    #Total # of lines: 40
-    #Total # of comment lines: 23
-    #Total # of single line comments: 5
-    #Total # of comment lines within block comments: 18
-    #Total # of block line comments: 4
-    #Total # of TODO’s: 1
