@@ -37,14 +37,14 @@ checks!
 ##### I. Breaking down the program requirements
 ###### First, I identify that the program is required to do the following:
 1. Program runs every time engineer checks in code.
-2. Counts total LOC (lines of code).
+2. Counts total LOC (lines of code). (DONE)
 3. Counts total lines of comments.
 4. After identifying a comment, it segregates the total number of single line and multi-line comments
 5. lines of code with trailign comments count as both LOC and a comment.
 6. Counts the total number of TODOs in all comments.
-7. **NOTE:** File could be any valid program file.
-8. Files without an extension could be ignored!
-9. Files starting with a '.' can also be ignored.  
+7. **NOTE:** File could be any valid program file. (DONE)
+8. Files without an extension could be ignored! (DONE)
+9. Files starting with a '.' can also be ignored. (DONE)
 <br>
 
 ##### II. Adding necessary Features
@@ -71,7 +71,8 @@ TODO: Needs to have the colon after
 
 
 ### Scalability
-
+have a dict of file extensions and comments and comment blocks for different file extensions. 
+This allows scalability for adding file types and different types.
 ### Maintainability
 
 
@@ -122,8 +123,42 @@ the second comment is not actually in a comment,
 even though it's trying to be. The first """ terminates
 the comment
 
+#//
+#// /*
+#some code()
+#// */
+
 file name: a.tar.gz
 what then?
+
+NESTED COMMENTS!!!!!!!!!!!!!!!!
+
+
+some languages are more complex,
+like COBOL: Astreisk in position 7 * to show that it's a comment.
+This is a little more tricky and would require a seperate small function to determine
+this. It's as simple as identifying the location of position 7 and determining 
+that this line is a comment. Simple, but since it's barely used is out of the scope
+of this program.
+same with Basic, COBOL: REM comment and Fortran: which uses letter C  as comment
+
+other languages to consider:
+
+ALGOL 60: ;
+Assembly: ;
+ADA, mySQL: --
+FORTRAN90: !
+simple commenting, can be added to the extensions.py file.
+
+Lua: -- single comment (just like Ada, Eiffel, Haskell, SQL, VHDL). block comment: --[[ ... ]]
+
+For HTML when having a built in script:
+\< script \>
+then depending on script type inside, we need to be able to determine comment types
+within that script and count it as that language's comment
+example: script="javaScript"
+for that portion of code, run the javaScript commenting style
+
 
 
 ## Adaptability

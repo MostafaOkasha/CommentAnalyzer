@@ -14,17 +14,17 @@ class CommentAnalyzerTest(unittest.TestCase):
         """Capability to detect valid file extensions
 
         """
-        file_name = "gitig.nore.c++"
-        test_class = CommentAnalyzer(file_name)
+        filename = "gitig.nore.c++"
+        test_class = CommentAnalyzer(filename)
         result = test_class.file_extension
         self.assertEqual(result, "c++")
 
     def test_2_file_extension(self):
         """
-        Test CommentAnalyzer class's capability to detect valid file extensions
+        filename with
         """
-        file_name = ".gitig.nore.c++"
-        test_class = CommentAnalyzer(file_name)
+        filename = ".gitig.nore.c++"
+        test_class = CommentAnalyzer(filename)
         result = test_class.file_extension
         self.assertEqual(result, False)
 
@@ -32,10 +32,37 @@ class CommentAnalyzerTest(unittest.TestCase):
         """
         Test CommentAnalyzer class's capability to detect valid file extensions
         """
-        file_name = "LICENSE"
-        test_class = CommentAnalyzer(file_name)
+        filename = "LICENSE"
+        test_class = CommentAnalyzer(filename)
         result = test_class.file_extension
         self.assertEqual(result, False)
 
+    def test_4_file_extension(self):
+        """
+        Test CommentAnalyzer class's capability to detect valid file extensions
+        """
+        filename = "commentanalyzer.py"
+        test_class = CommentAnalyzer(filename)
+        result = test_class.file_extension
+        self.assertEqual(result, "py")
+
+    def test_1_loc_count(self):
+        """
+        Test CommentAnalyzer class's capability to detect valid file extensions
+        """
+        filename = "extensions.py"
+        test_class = CommentAnalyzer(filename)
+        test_class.analyze_code()
+        result = test_class.counter_dict["loc"]
+        self.assertEqual(result, 15)
+
+
+
+
 if __name__ == '__main__':
-    unittest.main()
+    #unittest.main()
+
+    filename = "extensions.py"
+    test_class = CommentAnalyzer(filename)
+    test_class.analyze_code()
+    test_class.analysis_output('terminal')
